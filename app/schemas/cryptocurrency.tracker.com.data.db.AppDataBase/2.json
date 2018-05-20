@@ -1,0 +1,153 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "d099d6a54ed3a931b59e92cad2dbfe3e",
+    "entities": [
+      {
+        "tableName": "cryptomodel",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` REAL NOT NULL, `name` TEXT, `symbol` TEXT, `website_slug` TEXT, `rank` REAL, `circulating_supply` REAL, `total_supply` REAL, `max_supply` REAL, `last_updated` REAL, `usd_price` REAL, `usd_volume_24h` REAL, `usd_market_cap` REAL, `usd_percent_change_1h` REAL, `usd_percent_change_24h` REAL, `usd_percent_change_7d` REAL, `price` REAL, `volume_24h` REAL, `market_cap` REAL, `percent_change_1h` REAL, `percent_change_24h` REAL, `percent_change_7d` REAL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "symbol",
+            "columnName": "symbol",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "website_slug",
+            "columnName": "website_slug",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "rank",
+            "columnName": "rank",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "circulating_supply",
+            "columnName": "circulating_supply",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "total_supply",
+            "columnName": "total_supply",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "max_supply",
+            "columnName": "max_supply",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "last_updated",
+            "columnName": "last_updated",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quotes.uSD.price",
+            "columnName": "usd_price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quotes.uSD.volume_24h",
+            "columnName": "usd_volume_24h",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quotes.uSD.market_cap",
+            "columnName": "usd_market_cap",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quotes.uSD.percent_change_1h",
+            "columnName": "usd_percent_change_1h",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quotes.uSD.percent_change_24h",
+            "columnName": "usd_percent_change_24h",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quotes.uSD.percent_change_7d",
+            "columnName": "usd_percent_change_7d",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quotes.bTC.price",
+            "columnName": "price",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quotes.bTC.volume_24h",
+            "columnName": "volume_24h",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quotes.bTC.market_cap",
+            "columnName": "market_cap",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quotes.bTC.percent_change_1h",
+            "columnName": "percent_change_1h",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quotes.bTC.percent_change_24h",
+            "columnName": "percent_change_24h",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "quotes.bTC.percent_change_7d",
+            "columnName": "percent_change_7d",
+            "affinity": "REAL",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"d099d6a54ed3a931b59e92cad2dbfe3e\")"
+    ]
+  }
+}
