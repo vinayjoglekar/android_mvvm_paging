@@ -24,17 +24,15 @@ public class CryptoRepository {
 //        if (dataBase.userDao().getAll() != null && dataBase.userDao().getAll().size() > 0)
 //            data.setValue((ArrayList<CryptoModel>) dataBase.userDao().getAll());
 //        else
-            getCryptoData(start);
+        getCryptoData(start);
         return data;
     }
 
 
-
     public LiveData<ArrayList<CryptoModel>> getCryptoData(int start) {
         final MutableLiveData<ArrayList<CryptoModel>> data = new MutableLiveData<>();
-
         apiInterface = ApiClient.getClient().create(ApiInterface.class);
-        apiInterface.getCryptoResponse("INR", start, 20).enqueue(new Callback<CryptoResponse>() {
+        apiInterface.getCryptoResponse("BTC", start, 20).enqueue(new Callback<CryptoResponse>() {
             @Override
             public void onResponse(Call<CryptoResponse> call, Response<CryptoResponse> response) {
                 Log.d(TAG, "onResponse: " + response.body().getMetadata().getTimestamp());

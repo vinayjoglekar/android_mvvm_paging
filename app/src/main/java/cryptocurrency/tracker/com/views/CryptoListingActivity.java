@@ -28,7 +28,6 @@ public class CryptoListingActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-//        outState.
     }
 
     @Override
@@ -57,10 +56,10 @@ public class CryptoListingActivity extends AppCompatActivity {
         crypto_list.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-//                if (isLastItemVisible()) {
-//                    counter++;
-//                    observeViewModel(viewModel);
-//                }
+                if (isLastItemVisible()) {
+                    counter++;
+                    observeViewModel(viewModel);
+                }
             }
         });
     }
@@ -75,7 +74,7 @@ public class CryptoListingActivity extends AppCompatActivity {
             } else {
                 cryptoListingAdapter.notifyItemRangeInserted((counter * 20 + 1) - 20, 20);
             }
-            startDBInserting(cryptoModels);
+//            startDBInserting(cryptoModels);
         });
     }
 
@@ -89,10 +88,9 @@ public class CryptoListingActivity extends AppCompatActivity {
         else return false;
     }
 
-    //    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     private void startDBInserting(final ArrayList<CryptoModel> arrayList) {
         new Thread(() -> {
-            db.userDao().insertAllList(arrayList);
+//            db.userDao().insertAllList(arrayList);
 //                Log.d(TAG, "run: " + db.userDao().getAll().size());
 //                List<CryptoModel> list = db.userDao().getAll();
 //                Log.d(TAG, "run: " + list.size());
