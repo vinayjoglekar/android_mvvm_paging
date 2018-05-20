@@ -42,3 +42,4 @@ proguard-project.txt
 cmake-build-debug
 dist
 tmp
+schemas
