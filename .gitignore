@@ -25,6 +25,7 @@ gen-external-apklibs
 build
 buildout
 out
+schemas
 
 # Maven
 target
@@ -42,4 +43,3 @@ proguard-project.txt
 cmake-build-debug
 dist
 tmp
-schemas
