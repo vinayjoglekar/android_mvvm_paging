@@ -1,1 +1,1 @@
-Android app sample of MVVM architecture using ViewModel and Data Binding.
+Android app sample of architecture components using ViewModel and Data Binding, Recyclerview pagination with android paging library.
